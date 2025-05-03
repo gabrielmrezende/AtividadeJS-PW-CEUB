@@ -1,4 +1,4 @@
-let nome = teste;
+let nome = "";
 const restricaoNome = /^[A-Za-zÀ-ÿ0-9\s]+$/;
 
 while (true) {
@@ -16,6 +16,8 @@ while (true) {
 
     break;
 }
+
+document.getElementById("nome").textContent = nome;
 
 function salvar() {
     let nomeCompleto = [description = "Nome Completo", value = document.getElementById("nomeCompleto").value]
