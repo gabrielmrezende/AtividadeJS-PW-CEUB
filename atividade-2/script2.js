@@ -25,17 +25,17 @@ document
 
     switch (faixa) {
       case "aprovado":
-        mensagem = `Aluno ${nome} está Aprovado com média ${media.toFixed(2)}.`;
+        mensagem = `Aluno ${nome} está Aprovado com média ${media.toFixed(2)}`;
         break;
       case "recuperacao":
         mensagem = `Aluno ${nome} está em Recuperação com média ${media.toFixed(
           2
-        )}.`;
+        )}`;
         break;
       case "reprovado":
         mensagem = `Aluno ${nome} está Reprovado com média ${media.toFixed(
           2
-        )}.`;
+        )}`;
         break;
       default:
         mensagem = "Erro ao calcular a situação.";
