@@ -1,8 +1,8 @@
-let nome = "";
+let nome = teste;
 const restricaoNome = /^[A-Za-zÀ-ÿ0-9\s]+$/;
 
 while (true) {
-    nome = prompt("Digite seu nome:");
+    nome = prompt("Qual seu nome? ");
 
     if (!nome || nome.trim() === "") {
         alert("Erro: O nome não pode estar vazio.");
@@ -16,8 +16,6 @@ while (true) {
 
     break;
 }
-
-document.getElementById("nome").textContent = nome.trim();
 
 function salvar() {
     let nomeCompleto = [description = "Nome Completo", value = document.getElementById("nomeCompleto").value]
