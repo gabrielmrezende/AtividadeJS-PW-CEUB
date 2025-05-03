@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
-</head>
-<body>
-    <h2 class="cabecalho">
-        Ola, <span id="nome" aria-placeholder="aaaaa"></span>
-        <br>
-        Por favor preencha os campos abaixo e depois clique no botão Enviar. Caso necessite apagar os dados, dê um clique no botão Limpar.
-        <br>
-        Muito Obrigado.
-    </h2>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="cabecalho">
+      Ola, <span id="nome" aria-placeholder="aaaaa"></span>
+    </h1>
+    <p>
+      Por favor preencha os campos abaixo e depois clique no botão Enviar. Caso
+      necessite apagar os dados, dê um clique no botão Limpar. Muito Obrigado.
+    </p>
 
-    <div class="">
-
+    <div class="nome-email">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" />
+      <label for="email">Email:</label>
+      <input type="text" id="email" />
     </div>
 
+    <div class="sexo-es-bens">
+      <p>Sexo:</p>
+      <input type="radio" id="masculino" name="sexo" />
+      <label for="masculino">Masculino</label>
+      <input type="radio" id="feminino" name="sexo" />
+      <label for="feminino">Feminino</label>
+
+      <p>Estado Civil:</p>
+      <input type="radio" id="solteiro" name="estado-civil" />
+      <label for="solteiro">Solteiro</label>
+      <input type="radio" id="casado" name="estado-civil" />
+      <label for="casado">Casado</label>
+      <input type="radio" id="Enrolado" name="estado-civil" />
+      <label for="Enrolado">Enrolado</label>
+
+      <p>Bens que possui:</p>
+      <input type="checkbox" id="automovel" name="bens" value="carro" />
+      <label for="automovel">Automóvel</label>
+      <input type="checkbox" id="casa" name="bens" value="casa" />
+      <label for="casa">Casa</label>
+      <input type="checkbox" id="moto" name="bens" value="moto" />
+      <label for="moto">Moto</label>
+    </div>
+
+    <div class="idade-hobby">
+      <label for="idade">Faixa de idade:</label>
+      <select id="idade" name="idade">
+        <option value="idade">3 a 10 anos</option>
+        <option value="idade">11 a 18 anos</option>
+        <option value="idade">19 a 25 anos</option>
+        <option value="idade">26 a 30+</option>
+      </select>
+    </div>
+
+    <div class="observacao">
+      <p>Observações Gerais:</p>
+      <textarea id="observacao" rows="4" cols="50"></textarea>
+    </div>
+
+    <button onclick="limparFormulario()">Limpar</button>
+
     <script src="script3.js"></script>
-</body>
+  </body>
 </html>
