@@ -1,25 +1,25 @@
 let nome = "";
 const restricaoNome = /^[A-Za-zÀ-ÿ\s]+$/;
 
-// while (true) {
-//     nome = prompt("Qual seu nome? ");
+while (true) {
+    nome = prompt("Qual seu nome? ");
 
-//     if (!nome || nome.trim() === "") {
-//         alert("Erro: o nome não pode estar vazio.");
-//         continue;
-//     }
+    if (!nome || nome.trim() === "") {
+        alert("Erro: o nome não pode estar vazio.");
+        continue;
+    }
 
-//     if (!restricaoNome.test(nome.trim())) {
-//         alert("Erro: o nome deve conter apenas letras e espaços.");
-//         continue;
-//     }
+    if (!restricaoNome.test(nome.trim())) {
+        alert("Erro: o nome deve conter apenas letras e espaços.");
+        continue;
+    }
 
-//     break;
-// }
+    break;
+}
 document.getElementById("nome").textContent = nome;
 
 function limparFormulario() {
-  document.getElementById("nome").value = "";
+  document.getElementById("nome-form").value = "";
   document.getElementById("email").value = "";
   // Sexo
   document
