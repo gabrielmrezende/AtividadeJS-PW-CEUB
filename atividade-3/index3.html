@@ -1,23 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
 </head>
+
 <body>
     <h2 class="cabecalho">
-        Ola, <span id="nome" aria-placeholder="aaaaa"></span>
+        <p>
+            Olá, <span id="nome"></span>
+        </p>
+        <p>
+            Por favor preencha os campos abaixo e depois clique no botão Enviar. Caso necessite apagar os dados, dê um
+            clique no botão Limpar.
+            <br>
+            Muito Obrigado!
+        </p>
         <br>
-        Por favor preencha os campos abaixo e depois clique no botão Enviar. Caso necessite apagar os dados, dê um clique no botão Limpar.
-        <br>
-        Muito Obrigado.
     </h2>
 
-    <div class="">
+    <form id="formulario" style="font-size: larger;">
+        <div style="margin: 10px;">
+            Nome Completo:
+            <input type="text" id="nomeCompleto" name="nomeCompleto">
 
-    </div>
+            <span style="margin: 0px 10px"></span>
 
+            Seu e-mail:
+            <input type="text" id="email" name="email">
+        </div>
+
+        <div style="margin: 10px;">
+            Sexo:<br>
+            <input type="radio" id="feminino" name="sexo" value="Feminino">
+            <label for="feminino">Feminino</label><br>
+            <input type="radio" id="masculino" name="sexo" value="Masculino">
+            <label for="masculino">Masculino</label>
+        </div>
+
+        <div style="margin: 10px;">
+            Estado Civil:<br>
+            <input type="radio" id="solteiro" name="estadoCivil" value="Solteiro">
+            <label for="solteiro">Solteiro</label><br>
+            <input type="radio" id="casado" name="estadoCivil" value="Casado">
+            <label for="casado">Casado</label><br>
+            <input type="radio" id="enrolado" name="estadoCivil" value="Enrolado">
+            <label for="enrolado">Enrolado</label>
+        </div>
+
+        <div style="margin: 10px;">
+            Bens que possui:<br>
+            <input type="checkbox" id="casa" name="bens" value="Casa">
+            <label for="casa">Casa</label><br>
+            <input type="checkbox" id="automovel" name="bens" value="Automovel">
+            <label for="automovel">Automóvel</label><br>
+            <input type="checkbox" id="moto" name="bens" value="Moto">
+            <label for="moto">Moto</label>
+        </div>
+
+        <div style="margin: 10px;">
+            Faixa de idade:
+            <select id="faixaIdade" name="faixaIdade">
+                <option value="3 a 10 anos">3 a 10 anos</option>
+                <option value="11 a 17 anos">11 a 17 anos</option>
+                <option value="18 a 25 anos">18 a 25 anos</option>
+                <option value="26 a 35 anos">26 a 35 anos</option>
+                <option value="mais de 35 anos">mais de 35 anos</option>
+            </select>
+
+            <span style="margin: 0px 10px;"></span>
+
+            Hobby preferido:
+            <select id="hobby" name="hobby" style="margin: 10px;">
+                <option value="Ler livros">Ler livros</option>
+                <option value="Assistir filmes">Assistir filmes</option>
+                <option value="Esportes">Esportes</option>
+                <option value="Jogos">Jogos</option>
+                <option value="Ouvir musica">Ouvir música</option>
+            </select>
+        </div>
+
+        <div style="margin: 10px;">
+            Observações Gerais:<br>
+            <textarea id="observacoes" name="observacoes" rows="5" cols="50"></textarea>
+        </div>
+
+        <div style="margin: 10px;">
+            <button type="button" onclick="salvar()">Enviar os dados</button>
+            <button type="reset">Limpar os dados</button>
+        </div>
+    </form>
     <script src="script3.js"></script>
 </body>
+
 </html>
