@@ -1,23 +1,42 @@
 let ultimoConteudo = ""; // Armazena o último documento gerado
 
 function escreverDocumento() {
-  const js_qht = solicitarDado("Quantidade de horas trabalhadas no mês (135 a 180):", 135, 180);
-  if (js_qht == null) {return};
+  const js_qht = solicitarDado(
+    "Quantidade de horas trabalhadas no mês (135 a 180):",
+    135,
+    180
+  );
+  if (js_qht == null) {
+    return;
+  }
 
   const js_vht = solicitarDado("Valor da hora trabalhada (25 a 70):", 25, 70);
-  if (js_vht == null) {return};
+  if (js_vht == null) {
+    return;
+  }
 
-  const js_inss = solicitarDado("Percentual de desconto do INSS (5 a 15):", 5, 15);
-  if (js_inss == null) {return};
-  
+  const js_inss = solicitarDado(
+    "Percentual de desconto do INSS (5 a 15):",
+    5,
+    15
+  );
+  if (js_inss == null) {
+    return;
+  }
+
   const classificacao = solicitarClassificacao();
-  if (classificacao == null) {return};
+  if (classificacao == null) {
+    return;
+  }
 
   const salarioBruto = js_qht * js_vht;
   const descontoINSS = salarioBruto * (js_inss / 100);
   const salarioLiquido = salarioBruto - descontoINSS;
 
-  const status = salarioLiquido > 6000 ? "Salário Satisfatório!" : "Salário Não Satisfatório";
+  const status =
+    salarioLiquido > 6000
+      ? "Salário Satisfatório!"
+      : "Salário Não Satisfatório";
 
   ultimoConteudo = `
 DEMONSTRATIVO PARA CÁLCULO DO SALÁRIO LÍQUIDO
@@ -41,7 +60,7 @@ function solicitarDado(mensagem, min, max) {
   do {
     valor = prompt(mensagem);
     if (valor === null) {
-      return null
+      return null;
     }
     if (isNaN(valor) || valor < min || valor > max) {
       alert(`Por favor, insira um número entre ${min} e ${max}.`);
@@ -54,9 +73,13 @@ function solicitarClassificacao() {
   const opcoes = ["baixo", "medio alto", "insatisfatorio"];
   let classificacao;
   do {
-    classificacao = prompt("Classificação salarial (baixo, medio alto, insatisfatorio):").toLowerCase();
+    classificacao = prompt(
+      "Classificação salarial (baixo, medio alto, insatisfatorio):"
+    ).toLowerCase();
     if (!opcoes.includes(classificacao)) {
-      alert("Classificação inválida. Digite: baixo, medio alto ou insatisfatorio \n (Escreva sem acento).");
+      alert(
+        "Classificação inválida. Digite: baixo, medio alto ou insatisfatorio \n (Escreva sem acento)."
+      );
     }
   } while (!opcoes.includes(classificacao));
   return classificacao;

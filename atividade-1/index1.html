@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <title>Cálculo de Salário Líquido</title>
-</head>
-<body>
-  <h2>Cálculo de Salário Líquido</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cálculo de Salário Líquido</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <h2>Cálculo de Salário Líquido</h2>
 
-  <button onclick="escreverDocumento()">Escrever Documento</button>
-  <button onclick="salvarDocumento()">Salvar Documento</button>
+    <div class="botoes">
+      <button onclick="escreverDocumento()">Escrever Documento</button>
+      <button onclick="salvarDocumento()">Salvar Documento</button>
+    </div>
 
-  <pre id="output" style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; margin-top: 10px;"></pre>
+    <div id="output" class="output"></div>
 
-  <script src="script1.js"></script>
-</body>
+    <script src="script1.js"></script>
+  </body>
 </html>
