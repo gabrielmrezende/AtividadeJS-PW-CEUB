@@ -11,31 +11,17 @@ document
 
     const media = (nota1 + nota2 + nota3 + nota4) / 4;
 
-    let faixa = "";
-
-    if (media > 70) {
-      faixa = "aprovado";
-    } else if (media >= 50) {
-      faixa = "recuperacao";
-    } else {
-      faixa = "reprovado";
-    }
-
     let mensagem = "";
 
-    switch (faixa) {
-      case "aprovado":
+    switch (true) {
+      case media > 70:
         mensagem = `Aluno ${nome} está Aprovado com média ${media.toFixed(2)}`;
         break;
-      case "recuperacao":
-        mensagem = `Aluno ${nome} está em Recuperação com média ${media.toFixed(
-          2
-        )}`;
+      case media >= 50:
+        mensagem = `Aluno ${nome} está em Recuperação com média ${media.toFixed(2)}`;
         break;
-      case "reprovado":
-        mensagem = `Aluno ${nome} está Reprovado com média ${media.toFixed(
-          2
-        )}`;
+      case media < 50:
+        mensagem = `Aluno ${nome} está Reprovado com média ${media.toFixed(2)}`;
         break;
       default:
         mensagem = "Erro ao calcular a situação.";
